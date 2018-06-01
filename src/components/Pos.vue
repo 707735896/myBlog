@@ -281,7 +281,7 @@
     list-style: none;
     width: 23%;
     border: 1px solid #E5E9F2;
-    height: auot;
+    height: auto;
     overflow: hidden;
     background-color: #fff;
     padding: 2px;
@@ -312,7 +312,7 @@
   }
 
   .totalDiv {
-    height: auot;
+    height: auto;
     overflow: hidden;
     text-align: right;
     font-size: 16px;

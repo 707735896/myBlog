@@ -72,6 +72,7 @@
     border: 1px solid #888;
     padding: 10px;
     box-sizing: border-box;
+    border-radius: 10px;
   }
 
   p {
