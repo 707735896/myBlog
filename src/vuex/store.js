@@ -10,8 +10,9 @@ const state = {
   isLogin:false
 }
 
-//解决vuex和v-model的双向数据绑定
+
 const mutations = {
+  //解决vuex和v-model的双向数据绑定
   updateMessage(state, message) {
     state.message = message
   }
