@@ -14,6 +14,12 @@
         <li>
           <router-link to="/Pos">点餐系统</router-link>
         </li>
+        <li>
+          <router-link to="/Test">测试Vuex</router-link>
+        </li>
+        <li>
+          <router-link to="/Vuex2">测试Vuex2</router-link>
+        </li>
       </ul>
       <div @click="login" class="login" v-show="dl">登录</div>
       <div @click="qut" class="qut" v-show="tc" v-loading.fullscreen.lock="fullscreenLoading">退出</div>

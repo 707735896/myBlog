@@ -35,6 +35,12 @@
         <a href="https://blog.csdn.net/call_me_fly/article/details/79012581"
            style="color: red;margin-left: 32px;" target="_blank">原文链接：https://blog.csdn.net/call_me_fly/article/details/79012581</a>
       </ul>
+      <ul>
+        <h3>5、vuex 的dispatch和commit提交mutation的区别</h3>
+        <h4>1.当你的操作行为中含有异步操作，比如向后台请求获取数据，就需要使用action的dispatch去完成了，其他使用commit即可</h4>
+        <h4>2.commit=>mutations,用来触发同步操作的方法。dispatch =>actions,用来触发异步操作的方法。</h4>
+        <h4>3.在store中注册了mutation和action，在组件中用dispatch调用action，然后action用commit调用mutation</h4>
+      </ul>
     </div>
   </div>
 </template>

@@ -5,6 +5,8 @@ import Photo from '@/components/Photo'
 import Main from '@/components/Main'
 import Login from '@/components/Login'
 import Pos from '@/components/Pos'
+import Test from '@/components/Test'
+import Vuex2 from '@/components/Vuex2'
 import {getCookie} from '../assets/js/cookie.js'
 
 Vue.use(VueRouter);
@@ -91,7 +93,16 @@ const router = new VueRouter({
         })
       }
     }
-  }
+  }, {
+    path: '/Test',
+    name: 'Test',
+    component: Test
+  },
+    {
+      path: '/Vuex2',
+      name: 'Vuex2',
+      component: Vuex2
+    }
   ]
 })
 
