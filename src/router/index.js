@@ -12,7 +12,7 @@ import {getCookie} from '../assets/js/cookie.js'
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   routes: [{
     path: '/',
     name: 'Main',

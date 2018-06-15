@@ -20,9 +20,11 @@
         <li>
           <router-link to="/Vuex2">测试Vuex2</router-link>
         </li>
+        <li>
+          <div @click="login" class="login" v-show="dl">登录</div>
+          <div @click="qut" class="qut" v-show="tc" v-loading.fullscreen.lock="fullscreenLoading">退出</div>
+        </li>
       </ul>
-      <div @click="login" class="login" v-show="dl">登录</div>
-      <div @click="qut" class="qut" v-show="tc" v-loading.fullscreen.lock="fullscreenLoading">退出</div>
     </div>
   </div>
 </template>
@@ -108,29 +110,29 @@
     float: left;
   }
 
+  ul {
+    display: flex;
+  }
+
+  li {
+    flex: 1;
+    text-align: center;
+  }
+
   ul, li {
     list-style: none;
   }
 
   ul li, ul li > a {
-    display: inline-block;
-    float: left;
     width: 150px;
     height: 70px;
     line-height: 70px;
     color: #71777c;
-    text-align: center;
     cursor: pointer;
   }
 
   ul li > a:hover {
     color: #007fff;
-  }
-
-  .qut, .login {
-    float: right;
-    line-height: 70px;
-    color: #71777c;
   }
 
   .qut:hover, .login:hover {
