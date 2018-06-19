@@ -30,7 +30,6 @@
 </template>
 
 <script>
-  import {getCookie, delCookie} from '../assets/js/cookie.js'
 
   export default {
     name: "Header",
@@ -42,13 +41,9 @@
       }
     },
     created() {
-      if (getCookie('username')) {
-        this.tc = true;
-        this.dl = false;
-      } else {
-        this.dl = true;
-        this.tc = false;
-      }
+      console.log(this.$store.state.isLogin)
+      this.tc = true;
+      this.dl = false;
     },
     methods: {
       qut() {
@@ -61,12 +56,15 @@
             this.fullscreenLoading = true;
             setTimeout(() => {
               this.fullscreenLoading = false;
-              if (getCookie('username')) {
-                delCookie('username')
-                this.$router.push('/Login')
-              } else {
-                alert('未登录')
-              }
+              this.$store.dispatch('Logout').then(() => {
+                this.$router.push({path: '/login'});
+              })
+              // if (getCookie('username')) {
+              //   delCookie('username')
+              //   this.$router.push('/Login')
+              // } else {
+              //   alert('未登录')
+              // }
             }, 500);
           })
           .catch(() => {
