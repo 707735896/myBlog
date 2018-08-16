@@ -35,7 +35,7 @@ const actions = {
       let data = {};
       loginByUserInfo.map(function (item) {//获取所有用户信息
         if (info.username === item.username || info.password === item.password) {
-          commit('SET_ISLOGIN',1);
+          commit('SET_ISLOGIN', 1);
           commit('SET_USERNAME', item.username);
           sessionStorage.setItem('USERNAME', item.username);
           commit('SET_ROLE', item.role);
